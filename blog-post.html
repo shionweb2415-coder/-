@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記事｜Re:U Reverse Aging Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Noto Serif JP", serif; color: #252525; background: #f8f8f6; line-height: 1.9; }
+    a { color: inherit; }
+    header { background: #fff; border-bottom: 1px solid #e7e7e2; }
+    .header-inner { padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { font-size: 22px; letter-spacing: .08em; text-decoration: none; white-space: nowrap; }
+    .back { text-decoration: none; font-size: 13px; }
+    main { max-width: 830px; min-height: 70vh; margin: auto; padding: 90px 24px 120px; }
+    .date { color: #9b8565; font-size: 13px; text-align: center; }
+    h1 { font-size: clamp(26px, 4vw, 39px); font-weight: 500; line-height: 1.6; text-align: center; }
+    .cover { width: 100%; height: auto; max-height: 510px; object-fit: cover; margin: 42px auto; }
+    .article { overflow-wrap: anywhere; font-size: 15px; background: white; padding: 35px; }
+    .article img { display: block; max-width: 100%; height: auto; margin: 24px auto; }
+    .article p { margin: 0 0 1.4em; }
+    .article h2, .article h3 { margin: 2em 0 .8em; font-weight: 500; }
+    .article a { color: #8b714b; }
+    .article blockquote { padding-left: 18px; border-left: 3px solid #d4c6aa; color: #666; }
+    .article pre { overflow-x: auto; }
+    .return { display: block; width: fit-content; margin: 55px auto 0; padding: 13px 25px; border: 1px solid #555; text-decoration: none; }
+    footer { padding: 26px 20px; border-top: 1px solid #e7e7e2; text-align: center; font-size: 12px; color: #777; }
+    @media (max-width: 600px) { main { padding: 65px 18px 90px; } .article { padding: 22px 18px; } }
+  </style>
+</head>
+<body>
+  <header><div class="header-inner"><a class="brand" href="index.html">Re:U</a><a class="back" href="blog.html">← BLOGへ戻る</a></div></header>
+  <main>
+    <p class="date" id="article-date"></p>
+    <h1 id="article-title">記事を読み込んでいます…</h1>
+    <div id="article-cover"></div>
+    <div class="article" id="article-body" role="status"></div>
+    <a class="return" href="blog.html">ブログ一覧へ戻る</a>
+  </main>
+  <footer>© Re:U Reverse Aging Salon</footer>
+  <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js" defer></script>
+  <script src="blog-feed.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規のお客様 MENU｜Re:U</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box} body{margin:0;font-family:"Noto Serif JP",serif;background:#f8f8f6;color:#252525;line-height:1.8}
+    header{background:#fff;border-bottom:1px solid #e5e5df}.header-inner{max-width:1040px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center}.brand,.back{color:#252525;text-decoration:none}.brand{font-size:22px;letter-spacing:.08em}.back{font-size:13px}
+    main{max-width:920px;margin:auto;padding:80px 24px 110px}.title{text-align:center;margin-bottom:52px}.title small{letter-spacing:.18em;color:#888}.title h1{font-weight:500;font-size:32px;letter-spacing:.08em;margin:8px 0 0}
+    .notice{text-align:center;max-width:700px;margin:0 auto 44px;color:#666;font-size:14px}.menu-card{background:#fff;border:1px solid #deded8;padding:34px 34px;margin-bottom:20px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.menu-card h2{margin:0 0 8px;font-size:21px;font-weight:500}.menu-card p{margin:0;color:#666;font-size:14px}.price{font-size:20px;white-space:nowrap}.nav{text-align:center;margin-top:42px}.button{display:inline-block;padding:12px 26px;border:1px solid #333;text-decoration:none;color:#252525;margin:4px}.button:hover{background:#333;color:#fff}footer{text-align:center;padding:28px;border-top:1px solid #e5e5df;font-size:12px}
+    @media(max-width:650px){main{padding:60px 18px 80px}.menu-card{grid-template-columns:1fr;padding:28px 24px}.price{font-size:18px}}
+    
+.accordion {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border: 1px solid #deded8;
+  background: #fff;
+  margin-bottom: 22px;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 34px 38px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: inherit;
+  color: #252525;
+}
+
+.accordion-header > span:first-child {
+  flex: 1;
+}
+
+.accordion-header strong {
+  display: block;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.accordion-header small {
+  display: block;
+  margin-top: 12px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.price {
+  font-size: 19px;
+  white-space: nowrap;
+}
+
+.accordion-icon {
+  font-size: 24px;
+  font-weight: 300;
+  color: #a88d53;
+  transition: transform .3s;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .4s ease;
+}
+
+.accordion-item.active .accordion-content {
+  grid-template-rows: 1fr;
+}
+
+.accordion-content > .accordion-body {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.accordion-body {
+  padding: 0 38px;
+  color: #666;
+  font-size: 14px;
+}
+
+.accordion-item.active .accordion-body {
+  padding-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+  .accordion-header {
+    padding: 24px 20px;
+    gap: 12px;
+  }
+
+  .accordion-header strong {
+    font-size: 17px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .accordion-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+      .header-inner .brand { position: relative; left: min(0px, calc((1040px - 100vw) / 2)); }
+  
+    /* TOPページと同じ予約エリア */
+    .cta { padding: 100px 24px; background: #2d2d2b; color: #fff; text-align: center; }
+    .cta h2 { margin: 0 0 12px; font-size: 27px; font-weight: 500; }
+    .cta p { margin: 0; color: #ddd; }
+    .cta a { display: inline-block; margin-top: 26px; padding: 14px 34px; background: #fff; color: #252525; text-decoration: none; border: 1px solid #fff; }
+    @media (max-width: 800px) { .cta { padding: 76px 18px; } }
+  </style>
+</head>
+<body>
+<header><div class="header-inner"><a class="brand" href="index.html">Re:U</a><a class="back" href="menu.html">← MENUへ戻る</a></div></header>
+<main>
+  <div class="title"><small>FIRST VISIT</small><h1>新規のお客様 MENU</h1></div>
+  <p class="notice">初めてRe:Uをご利用になるお客様向けのメニューページです。</p>
+
+  
+<div class="accordion">
+
+  <div class="accordion-item">
+    <button class="accordion-header" type="button">
+      <span>
+        <strong>レプトンガス（水素）</strong>
+        <small>初めての方にもご利用いただける水素メニューです。</small>
+      </span>
+      <span class="price">¥4,980〜</span>
+      <span class="accordion-icon">＋</span>
+    </button>
+    <div class="accordion-content">
+      <div class="accordion-body">
+        <!-- ここにレプトンガスの詳細を入れる -->
+        <p>施術時間・料金・詳細情報を掲載予定</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header" type="button">
+      <span>
+        <strong>ネオヒーラー</strong>
+        <small>身体の深部にアプローチし、細胞レベルで整える施術。</small>
+      </span>
+      <span class="price">¥4,950〜</span>
+      <span class="accordion-icon">＋</span>
+    </button>
+    <div class="accordion-content">
+      <div class="accordion-body">
+        <!-- ここにネオヒーラーの詳細を入れる -->
+        <p>施術時間・料金・詳細情報を掲載予定</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header" type="button">
+      <span>
+        <strong>ピラティスコンディショニング</strong>
+        <small>身体の歪みを整え、正しい姿勢と動きを取り戻す。</small>
+      </span>
+      <span class="price">¥8,800〜</span>
+      <span class="accordion-icon">＋</span>
+    </button>
+    <div class="accordion-content">
+      <div class="accordion-body">
+        <!-- ここにピラティスの詳細を入れる -->
+        <p>施術時間・料金・詳細情報を掲載予定</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="nav"><a class="button" href="menu.html">メニュー選択へ戻る</a></div>
+</main>
+  <section class="cta" id="reservation">
+    <h2>ご予約はこちら</h2>
+    <p>公式LINEから簡単にご予約いただけます</p>
+    <a href="#">予約する</a>
+  </section>
+
+<footer>© Re:U Reverse Aging Salon</footer>
+  
+<script>
+document.querySelectorAll(".accordion-header").forEach(button => {
+  button.setAttribute("aria-expanded", "false");
+
+  button.addEventListener("click", () => {
+    const item = button.closest(".accordion-item");
+    const isOpen = item.classList.contains("active");
+
+    // ほかのメニューを閉じる
+    document.querySelectorAll(".accordion-item").forEach(el => {
+      el.classList.remove("active");
+      el.querySelector(".accordion-header")
+        .setAttribute("aria-expanded", "false");
+    });
+
+    // 押したメニューを開く・閉じる
+    if (!isOpen) {
+      item.classList.add("active");
+      button.setAttribute("aria-expanded", "true");
+    }
+  });
+});
+</script>
+
+</body>
+</html>

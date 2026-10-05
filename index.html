@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re:U｜Reverse Aging Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Noto Serif JP", serif;
+      background: #f8f8f6;
+      color: #252525;
+      line-height: 1.8;
+    }
+    a { color: inherit; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248,248,246,.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e7e7e2;
+    }
+    
+.header-inner {
+  max-width: none;
+  margin: 0;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+    .brand {
+      text-decoration: none;
+      font-size: 22px;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+    nav { display: flex; gap: 24px; flex-wrap: wrap; justify-content: flex-end; }
+    nav a {
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: .08em;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -5px;
+      width: 100%; height: 1px;
+      background: #252525;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: .25s;
+    }
+    nav a:hover::after { transform: scaleX(1); }
+
+    
+/* トップページ：左に文字、右に写真 */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 570px;
+  padding: 0;
+  background: #f8f8f6;
+  text-align: left;
+  align-items: stretch;
+}
+
+/* 左側の文字 */
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 7vw;
+  max-width: none;
+  background: transparent;
+  border: none;
+}
+
+/* 右側の写真 */
+.hero-photo {
+  position: relative;
+  min-height: 450px;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* スマートフォン対応 */
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-inner {
+    padding: 65px 25px;
+  }
+
+  .hero-photo {
+    min-height: 300px;
+    height: 350px;
+  }
+}
+
+    .eyebrow {
+      margin: 0 0 12px;
+      font-size: 12px;
+      letter-spacing: .22em;
+    }
+    .hero h1 {
+      margin: 0 0 18px;
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 500;
+      letter-spacing: .05em;
+      line-height: 1.45;
+    }
+    .hero p { margin: 0; font-size: 16px; }
+
+    section { padding: 100px 24px; }
+    .section-inner { max-width: 1040px; margin: 0 auto; }
+    .section-title {
+      margin: 0 0 46px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 28px;
+      letter-spacing: .12em;
+    }
+    .section-title span {
+      display: block;
+      margin-top: 7px;
+      font-size: 11px;
+      letter-spacing: .18em;
+      color: #888;
+    }
+
+    .concept { background: #fff; text-align: center; }
+    .concept p { max-width: 700px; margin: 0 auto; }
+
+    .features { background: #f1f1ed; }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .feature-item {
+      background: #fff;
+      padding: 42px 28px;
+      min-height: 180px;
+      border: 1px solid #e4e4de;
+    }
+    .feature-item h3 { margin: 0 0 12px; font-size: 19px; font-weight: 500; }
+    .feature-item p { margin: 0; font-size: 14px; color: #666; }
+
+    .menu { background: #fff; }
+    .menu-lead { text-align: center; margin: -20px auto 40px; max-width: 650px; color: #666; }
+    .menu-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 42px;
+    }
+    .menu-item {
+      padding: 34px 24px;
+      border: 1px solid #deded8;
+      text-align: center;
+      background: #fbfbf9;
+    }
+    .menu-item h3 { margin: 0 0 10px; font-size: 18px; font-weight: 500; }
+    .menu-item p { margin: 0; font-size: 14px; color: #666; }
+    .center { text-align: center; }
+    .button {
+      display: inline-block;
+      padding: 14px 34px;
+      border: 1px solid #333;
+      text-decoration: none;
+      letter-spacing: .08em;
+      font-size: 14px;
+      transition: .25s;
+    }
+    .button:hover { background: #333; color: #fff; }
+
+    .cta { background: #2d2d2b; color: #fff; text-align: center; }
+    .cta h2 { margin: 0 0 12px; font-size: 27px; font-weight: 500; }
+    .cta p { margin: 0; color: #ddd; }
+    .cta a {
+      display: inline-block;
+      margin-top: 26px;
+      padding: 14px 34px;
+      background: #fff;
+      color: #252525;
+      text-decoration: none;
+      border: 1px solid #fff;
+    }
+
+    footer {
+      padding: 28px 20px;
+      text-align: center;
+      font-size: 12px;
+      background: #f8f8f6;
+      border-top: 1px solid #e7e7e2;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .9s ease, transform .9s ease;
+    }
+    .fade-up.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 800px) {
+      .header-inner { flex-direction: column; gap: 10px; padding: 13px 16px; }
+      nav { gap: 15px; justify-content: center; }
+      nav a { font-size: 11px; }
+      .hero { min-height: auto; padding: 0; }
+      section { padding: 76px 18px; }
+      .feature-list, .menu-list { grid-template-columns: 1fr; }
+      .feature-item, .menu-item { max-width: 520px; width: 100%; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="brand" href="index.html">Re:U</a>
+    <nav>
+      <a href="#home">HOME</a>
+      <a href="#concept">CONCEPT</a>
+      <a href="#features">FEATURES</a>
+      <a href="#menu">MENU</a>
+      <a href="blog.html">BLOG</a>
+      <a href="#reservation">RESERVATION</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  
+<section class="hero" id="home">
+
+  <div class="hero-inner fade-up">
+    <p class="eyebrow">Reverse Aging Salon</p>
+
+    <h1>身体を根本から整える</h1>
+
+    <p>細胞レベルから整える、新しい健康習慣</p>
+  </div>
+
+  <div class="hero-photo">
+    <img src="S__178692114.jpg" alt="ピラティスのイメージ">
+  </div>
+
+</section>
+
+
+  <section class="features fade-up" id="features">
+    <div class="section-inner">
+      <h2 class="section-title">FEATURES<span>特徴</span></h2>
+      <div class="feature-list">
+        <div class="feature-item fade-up">
+          <h3>継続しやすい</h3>
+          <p>無理なく続けられる設計</p>
+        </div>
+        <div class="feature-item fade-up">
+          <h3>細胞レベル</h3>
+          <p>内側から整えるアプローチ</p>
+        </div>
+        <div class="feature-item fade-up">
+          <h3>根本改善</h3>
+          <p>身体の土台から変える</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu fade-up" id="menu">
+    <div class="section-inner">
+      <h2 class="section-title">MENU<span>施術メニュー</span></h2>
+      <p class="menu-lead">新規のお客様と既存のお客様でメニュー内容が異なります。<br>
+      詳細はMENUページからご確認ください。<br>
+      ホームページからのご予約はホットペッパービューティーの料金よりもお安くご案内できます。</p>
+      <div class="menu-list">
+        <div class="menu-item fade-up">
+          <h3>レプトンガス（水素）</h3>
+          <p>¥3,200〜</p>
+        </div>
+        <div class="menu-item fade-up">
+          <h3>ネオヒーラー</h3>
+          <p>¥4,950〜</p>
+        </div>
+        <div class="menu-item fade-up">
+          <h3>ピラティス</h3>
+          <p>¥8,800〜</p>
+        </div>
+      </div>
+      <div class="center">
+        <a class="button" href="menu.html">メニュー詳細を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta fade-up" id="reservation">
+    <h2>ご予約はこちら</h2>
+    <p>公式LINEから簡単にご予約いただけます</p>
+    <a href="#">予約する</a>
+  </section>
+</main>
+
+<footer>
+  <p>© Re:U Reverse Aging Salon</p>
+</footer>
+
+<script>
+  const fadeElements = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.12 });
+  fadeElements.forEach(element => observer.observe(element));
+</script>
+</body>
+</html>
