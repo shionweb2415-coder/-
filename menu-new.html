@@ -83,170 +83,20 @@
       font-size: 14px;
     }
 
-    .menu-card {
-      background: #fff;
-      border: 1px solid #deded8;
-      padding: 34px 34px;
-      margin-bottom: 20px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: center;
-    }
 
-    .menu-card h2 {
-      margin: 0 0 8px;
-      font-size: 21px;
-      font-weight: 500;
-    }
+    /* メニュー一覧 */
 
-    .menu-card p {
-      margin: 0;
-      color: #666;
-      font-size: 14px;
-    }
-
-    .price {
-      font-size: 20px;
-      white-space: nowrap;
-    }
-
-    .nav {
-      text-align: center;
-      margin-top: 42px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 26px;
-      border: 1px solid #333;
-      text-decoration: none;
-      color: #252525;
-      margin: 4px;
-    }
-
-    .button:hover {
-      background: #333;
-      color: #fff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 28px;
-      border-top: 1px solid #e5e5df;
-      font-size: 12px;
-    }
-
-    @media(max-width:650px) {
-
-      main {
-        padding: 60px 18px 80px;
-      }
-
-      .menu-card {
-        grid-template-columns: 1fr;
-        padding: 28px 24px;
-      }
-
-      .price {
-        font-size: 18px;
-      }
-
-    }
-
-
-    /* アコーディオン */
-
-    .accordion {
+    .menu-list {
       max-width: 950px;
       margin: 0 auto;
     }
 
-    .accordion-item {
-      border: 1px solid #deded8;
-      background: #fff;
-      margin-bottom: 22px;
-    }
 
-    .accordion-header {
-      width: 100%;
-      padding: 34px 38px;
-      border: none;
-      background: none;
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      font-family: inherit;
-      color: #252525;
-    }
-
-    .accordion-header > span:first-child {
-      flex: 1;
-    }
-
-    .accordion-header strong {
-      display: block;
-      font-size: 21px;
-      font-weight: 500;
-    }
-
-    .accordion-header small {
-      display: block;
-      margin-top: 12px;
-      color: #777;
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    .price {
-      font-size: 19px;
-      white-space: nowrap;
-    }
-
-    .accordion-icon {
-      font-size: 24px;
-      font-weight: 300;
-      color: #a88d53;
-      transition: transform .3s;
-    }
-
-    .accordion-item.active .accordion-icon {
-      transform: rotate(45deg);
-    }
-
-    .accordion-content {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows .4s ease;
-    }
-
-    .accordion-item.active .accordion-content {
-      grid-template-rows: 1fr;
-    }
-
-    .accordion-content > .accordion-body {
-      min-height: 0;
-      overflow: hidden;
-    }
-
-    .accordion-body {
-      padding: 0 38px;
-      color: #666;
-      font-size: 14px;
-    }
-
-    .accordion-item.active .accordion-body {
-      padding-bottom: 32px;
-    }
-
-
-    /* 人気No.1メニュー */
+    /* メニューカード */
 
     .popular-menu {
       position: relative;
-      margin-top: 6px;
+      margin-bottom: 22px;
       padding: 28px 24px 24px;
       background: #fffdf8;
       border: 1px solid #d8c39a;
@@ -300,24 +150,34 @@
     }
 
 
+    /* 戻るボタン */
+
+    .nav {
+      text-align: center;
+      margin-top: 42px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 26px;
+      border: 1px solid #333;
+      text-decoration: none;
+      color: #252525;
+      margin: 4px;
+    }
+
+    .button:hover {
+      background: #333;
+      color: #fff;
+    }
+
+
+    /* スマホ */
+
     @media (max-width: 600px) {
 
-      .accordion-header {
-        padding: 24px 20px;
-        gap: 12px;
-      }
-
-      .accordion-header strong {
-        font-size: 17px;
-      }
-
-      .price {
-        font-size: 15px;
-      }
-
-      .accordion-body {
-        padding-left: 20px;
-        padding-right: 20px;
+      main {
+        padding: 60px 18px 80px;
       }
 
       .popular-menu {
@@ -379,6 +239,14 @@
 
     }
 
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      border-top: 1px solid #e5e5df;
+      font-size: 12px;
+    }
+
   </style>
 </head>
 
@@ -390,7 +258,9 @@
 
   <div class="header-inner">
 
-    <a class="brand" href="index.html">Re:U</a>
+    <a class="brand" href="index.html">
+      Re:U
+    </a>
 
     <a class="back" href="menu.html">
       ← MENUへ戻る
@@ -401,11 +271,15 @@
 </header>
 
 
+
 <main>
+
 
   <div class="title">
 
-    <small>FIRST VISIT</small>
+    <small>
+      FIRST VISIT
+    </small>
 
     <h1>
       新規のお客様 MENU
@@ -419,189 +293,167 @@
   </p>
 
 
-  <div class="accordion">
+
+  <div class="menu-list">
 
 
-    <!-- レプトンガス -->
+    <!-- 人気No.1 -->
 
-    <div class="accordion-item">
+    <div class="popular-menu">
 
-      <button class="accordion-header" type="button">
+      <div class="popular-badge">
+        人気 No.1
+      </div>
 
-        <span>
+      <p class="menu-title">
+        レプトンガス吸入 × ネオヒーラー［全身］ 60分
+      </p>
 
-          <strong>
-            レプトンガス（水素）
-          </strong>
+      <p class="menu-description">
+        高濃度水素を吸入しながら、究極のオーダーメイドなエイジングケア！
+      </p>
 
-          <small>
-            初めての方にもご利用いただける水素メニューです。
-          </small>
+      <div class="menu-price">
 
+        <span class="old-price">
+          ¥15,800
         </span>
 
-        <span class="price">
-          ¥4,980〜
+        <span class="arrow">
+          →
         </span>
 
-        <span class="accordion-icon">
-          ＋
+        <span class="new-price">
+          ¥12,800
         </span>
 
-      </button>
+      </div>
+
+    </div>
 
 
-      <div class="accordion-content">
 
-        <div class="accordion-body">
+    <!-- レプトンガス吸入 × ネオヒーラー -->
+
+    <div class="popular-menu">
+
+      <p class="menu-title">
+        レプトンガス吸入×ネオヒーラー[フットorヘッド]　30分
+      </p>
+
+      <p class="menu-description">
+        高濃度水素を吸入しながら疲れやむくみを一瞬で取り除く！
+      </p>
+
+      <div class="menu-price">
+
+        <span class="old-price">
+          ¥8,800
+        </span>
+
+        <span class="arrow">
+          →
+        </span>
+
+        <span class="new-price">
+          ¥6,600
+        </span>
+
+      </div>
+
+    </div>
 
 
-          <div class="popular-menu">
 
-            <div class="popular-badge">
-              人気 No.1
-            </div>
+    <!-- レプトンガス30分 -->
 
-            <p class="menu-title">
-              レプトンガス吸入 × ネオヒーラー［全身］ 60分
-            </p>
+    <div class="popular-menu">
 
-            <p class="menu-description">
-              高濃度水素を吸入しながら、究極のオーダーメイドなエイジングケア！
-            </p>
+      <p class="menu-title">
+        高濃度水素吸入（レプトンガス）30分
+      </p>
 
-            <div class="menu-price">
+      <p class="menu-description">
+        基礎体温＆免疫力up/自律神経ケア/疲労回復/睡眠の質改善に
+      </p>
 
-              <span class="old-price">
-                ¥15,800
-              </span>
+      <div class="menu-price">
 
-              <span class="arrow">
-                →
-              </span>
+        <span class="old-price">
+          ¥4,980
+        </span>
 
-              <span class="new-price">
-                ¥12,800
-              </span>
+        <span class="arrow">
+          →
+        </span>
 
-            </div>
+        <span class="new-price">
+          ¥3,200
+        </span>
 
-          </div>
-          <br>
-          <br>
-          <div class="popular-menu">
+      </div>
 
-            <p class="menu-title">
-              レプトンガス吸入×ネオヒーラー[フットorヘッド]　30分
-            </p>
+    </div>
 
-            <p class="menu-description">
-              高濃度水素を吸入しながら疲れやむくみを一瞬で取り除く！
-            </p>
 
-            <div class="menu-price">
 
-              <span class="old-price">
-                ¥8,800
-              </span>
+    <!-- レプトンガス60分 -->
 
-              <span class="arrow">
-                →
-              </span>
+    <div class="popular-menu">
 
-              <span class="new-price">
-                ¥6,600
-              </span>
+      <p class="menu-title">
+        高濃度水素吸入（レプトンガス）60分
+      </p>
 
-            </div>
+      <p class="menu-description">
+        基礎体温＆免疫力up/自律神経ケア/疲労回復/睡眠の質改善に
+      </p>
 
-          </div>
-<br>
-          <br>
+      <div class="menu-price">
 
-          <div class="popular-menu">
+        <span class="old-price">
+          ¥8,400
+        </span>
 
-            <p class="menu-title">
-              高濃度水素吸入（レプトンガス）30分
-            </p>
-            <p class="menu-description">
-              基礎体温＆免疫力up/自律神経ケア/疲労回復/睡眠の質改善に
-            </p>
+        <span class="arrow">
+          →
+        </span>
 
-            <div class="menu-price">
-              <span class="old-price">
-                ¥4,980
-              </span>
-              
-              <span class="arrow">
-                →
-              </span>
+        <span class="new-price">
+          ¥4,980
+        </span>
 
-              <span class="new-price">
-                ¥3,200
-              </span>
+      </div>
 
-            </div>
+    </div>
 
-          </div>
-<br>
-          <br>
 
-          <div class="popular-menu">
 
-            <p class="menu-title">
-              高濃度水素吸入（レプトンガス）60分
-            </p>
-            <p class="menu-description">
-              基礎体温＆免疫力up/自律神経ケア/疲労回復/睡眠の質改善に
-            </p>
+    <!-- レプトンガス90分 -->
 
-            <div class="menu-price">
-              <span class="old-price">
-                ¥8,400
-              </span>
-              
-              <span class="arrow">
-                →
-              </span>
+    <div class="popular-menu">
 
-              <span class="new-price">
-                ¥4,980
-              </span>
+      <p class="menu-title">
+        高濃度水素吸入（レプトンガス）90分
+      </p>
 
-            </div>
+      <p class="menu-description">
+        悪玉活性酸素を徹底的にデトックス！
+      </p>
 
-          </div>
-<br>
-          <br>
+      <div class="menu-price">
 
-          <div class="popular-menu">
+        <span class="old-price">
+          ¥10,800
+        </span>
 
-            <p class="menu-title">
-              高濃度水素吸入（レプトンガス）90分
-            </p>
-            <p class="menu-description">
-              悪玉活性酸素を徹底的にデトックス！
-            </p>
+        <span class="arrow">
+          →
+        </span>
 
-            <div class="menu-price">
-              <span class="old-price">
-                ¥10,800
-              </span>
-              
-              <span class="arrow">
-                →
-              </span>
-
-              <span class="new-price">
-                ¥6,480
-              </span>
-
-            </div>
-
-          </div>
-
-        </div>
+        <span class="new-price">
+          ¥6,480
+        </span>
 
       </div>
 
@@ -611,44 +463,21 @@
 
     <!-- ネオヒーラー -->
 
-    <div class="accordion-item">
+    <div class="popular-menu">
 
-      <button class="accordion-header" type="button">
+      <p class="menu-title">
+        ネオヒーラー
+      </p>
 
-        <span>
+      <p class="menu-description">
+        身体の深部にアプローチし、細胞レベルで整える施術。
+      </p>
 
-          <strong>
-            ネオヒーラー
-          </strong>
+      <div class="menu-price">
 
-          <small>
-            身体の深部にアプローチし、細胞レベルで整える施術。
-          </small>
-
-        </span>
-
-        <span class="price">
+        <span class="new-price">
           ¥4,950〜
         </span>
-
-        <span class="accordion-icon">
-          ＋
-        </span>
-
-      </button>
-
-
-      <div class="accordion-content">
-
-        <div class="accordion-body">
-
-          <!-- ここにネオヒーラーの詳細を入れる -->
-
-          <p>
-            施術時間・料金・詳細情報を掲載予定
-          </p>
-
-        </div>
 
       </div>
 
@@ -658,44 +487,21 @@
 
     <!-- ピラティス -->
 
-    <div class="accordion-item">
+    <div class="popular-menu">
 
-      <button class="accordion-header" type="button">
+      <p class="menu-title">
+        ピラティスコンディショニング
+      </p>
 
-        <span>
+      <p class="menu-description">
+        身体の歪みを整え、正しい姿勢と動きを取り戻す。
+      </p>
 
-          <strong>
-            ピラティスコンディショニング
-          </strong>
+      <div class="menu-price">
 
-          <small>
-            身体の歪みを整え、正しい姿勢と動きを取り戻す。
-          </small>
-
-        </span>
-
-        <span class="price">
+        <span class="new-price">
           ¥8,800〜
         </span>
-
-        <span class="accordion-icon">
-          ＋
-        </span>
-
-      </button>
-
-
-      <div class="accordion-content">
-
-        <div class="accordion-body">
-
-          <!-- ここにピラティスの詳細を入れる -->
-
-          <p>
-            施術時間・料金・詳細情報を掲載予定
-          </p>
-
-        </div>
 
       </div>
 
@@ -740,50 +546,6 @@
 <footer>
   © Re:U Reverse Aging Salon
 </footer>
-
-
-
-<script>
-
-document.querySelectorAll(".accordion-header").forEach(button => {
-
-  button.setAttribute("aria-expanded", "false");
-
-
-  button.addEventListener("click", () => {
-
-    const item = button.closest(".accordion-item");
-
-    const isOpen = item.classList.contains("active");
-
-
-    // ほかのメニューを閉じる
-
-    document.querySelectorAll(".accordion-item").forEach(el => {
-
-      el.classList.remove("active");
-
-      el.querySelector(".accordion-header")
-        .setAttribute("aria-expanded", "false");
-
-    });
-
-
-    // 押したメニューを開く・閉じる
-
-    if (!isOpen) {
-
-      item.classList.add("active");
-
-      button.setAttribute("aria-expanded", "true");
-
-    }
-
-  });
-
-});
-
-</script>
 
 
 </body>
